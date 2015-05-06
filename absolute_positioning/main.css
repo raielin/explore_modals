@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  /*set min-height to make sure html and body elements reach bottom of viewport AND increase as content increases*/
+  min-height: 100%;
+}
+
 body {
   position: relative;
   padding: 30px;
@@ -7,6 +13,7 @@ body {
 }
 
 .overlay {
+  /*overlay must be positioned absolutely __with respect to the body__.*/
   position: absolute;
   top: 0;
   left: 0;
@@ -34,5 +41,5 @@ body {
 }
 
 .main {
-  margin: 10px;
+  margin: 30px;
 }
