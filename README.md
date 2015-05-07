@@ -86,4 +86,3 @@ The pseudo-element itself can be either fixed or absolutely, but the positioning
 ##References
 * https://blog.udemy.com/css-overlay/
 * http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
-* http://codepen.io/SaraSoueidan/pen/42d073445ebb26c569db9d2dd7395af2
