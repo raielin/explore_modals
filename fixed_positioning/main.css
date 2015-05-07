@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  position: relative;
+  /*position: relative;*/   /*Needed if pseudo-element or .overlay is positioned absolutely */
   padding: 30px;
   font-family: Arial;
   background: #f1c40f;
@@ -13,7 +13,6 @@ body {
 }
 
 .overlay {
-  /*overlay must be positioned absolutely __with respect to the body__.*/
   position: fixed;
   top: 0;
   left: 0;
