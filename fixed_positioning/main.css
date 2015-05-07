@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+  /*set min-height to make sure html and body elements reach bottom of viewport AND increase as content increases*/
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  padding: 30px;
+  font-family: Arial;
+  background: #f1c40f;
+  color: #fff;
+}
+
+.overlay {
+  /*overlay must be positioned absolutely __with respect to the body__.*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*set background color to transparent gray to make modal stand out and 'dim' the main page*/
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.modal {
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
+  background-color: #F35798;
+  border-radius: 5px;
+  text-align: center;
+  /*Make z-index 1px higher (closer to the screen) than the overlay layer*/
+  z-index: 11;
+}
+
+.main {
+  margin: 30px;
+}
