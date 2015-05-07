@@ -61,9 +61,27 @@ No matter where you put the overlay `div`, it'll get a fixed position with respe
 ####Pros
 * Don't have to worry about where you put overlay `div` in markup (except in the case where there is a transformed ancestor element).
 * This technique is supported in all major browsers.
+* Overlay to stays in position, covering the whole viewport area, no matter how far down main content extends, or how far down user scrolls.
 
 ####Cons
 * This technique requires an empty `div` in your markup, which is non-semantic.
+
+##Using Pseudo-element
+Use pseudo-elements to avoid adding empty elements into markup.
+
+Styles and considerations are same as previous techniques, but instead of sytling and positioning an empty element with a class `.overlay`, style the `:before` or `:after` pseudo-element on the `body`.
+
+The pseudo-element itself can be either fixed or absolutely, but the positioning of the body will have to be relative in the case of an absolutely positioned pseudo-element.
+
+###Pros & Cons
+
+####Pros
+* No empty element in markup.
+* Creates an overlay that covers the whole viewport area, no matter how far down main content extends, or how far down user scrolls.
+
+####Cons
+* Pseudo-elements can present more compatability issues with older browsers.
+
 
 ##References
 * https://blog.udemy.com/css-overlay/
