@@ -82,7 +82,53 @@ The pseudo-element itself can be either fixed or absolutely, but the positioning
 ####Cons
 * Pseudo-elements can present more compatability issues with older browsers.
 
+##Using HTML <dialog> Element
+Most semantic technique is to use HTML `<dialog>` element, which provides in-page dialog box funtionality.
+
+A *dialog* exists in the DOM tree and can be styled using ordinary CSS. For more information see [WHATWG entry](https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element), [MDN: HTML Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog), and [MDN: HTMLDialogElement DOM Interface API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement).
+
+### HTML <dialog> Element
+
+####Key Features
+The HTML dialog element has four main features (the fourth one - anchor points - is not yet implemented), three of which are pertinent here:
+* Positioning
+    - By default, a dialog is centered vertically in the viewport when opened.
+    - It is absolutely positioned by default and can be scrolled. Override this by setting position to fixed in CSS and setting `top` and `left` values to center it.
+    - Viewport centering occurs regardless of dialog's position in DOM tree.
+* Modal Feature
+    - Dialogs can be modal.
+    - As a modal, dialogs will block the rest of the document.
+    - There is a "pending dialog" stack to handle the case of multiple modal dialogs.
+    - Includes pseudo element called `::backdrop`, which sets the background behind a modal, creating the dimming overlay effect.
+* Always On Top
+    - A new stacking layer on top of existing CSS stacking contexts handles "always on top" behavior.
+    - Dialog and Fullscreen spec both use top layer. 
+    - Modal dialogs reside in the top layer.
+    - Don't need set `z-index` manually.
+
+####DOM Interface API
+Dialog element comes with an API which provides access to functions like `show()` and `hide()`.
+
+###Pros & Cons
+
+####Pros
+* No empty element in markup.
+* Dialog element can be placed anywhere in the DOM.
+* Creates an overlay that covers the whole viewport area, no matter how far down main content extends, or how far down user scrolls.
+
+####Cons
+* Currently only basic support in Chrome and Opera.
+
 
 ##References
 * https://blog.udemy.com/css-overlay/
 * http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
+* [Offical `<dialog>` element demos](http://demo.agektmr.com/dialog/)
+* [WHATWG official documentation](https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element)
+* [MDN: HTML Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+* [MDN: HTMLDialogElement DOM Interface API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement)
+* [`<dialog>` polyfill](https://github.com/GoogleChrome/dialog-polyfill)
+* http://blog.teamtreehouse.com/a-preview-of-the-new-dialog-element
+* [12-16-2013 update on `<dialog>`](http://updates.html5rocks.com/2013/09/dialog-element-Modals-made-easy)
+* [7-24-2014 update on `<dialog>`](http://updates.html5rocks.com/2014/07/dialog-element-shipped-in-Chrome-37-Beta)
+
