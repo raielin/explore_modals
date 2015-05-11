@@ -11,6 +11,11 @@ var modalBtn = document.getElementById('showModal');
 var styledModalBtn = document.getElementById('showStyledModal');
 var closeBtns = document.querySelectorAll('.close');
 
+// Register dialog polyfill
+dialogPolyfill.registerDialog(dialog);
+dialogPolyfill.registerDialog(modal);
+dialogPolyfill.registerDialog(styledModal);
+
 // Setup event listeners for show buttons.
 dialogBtn.addEventListener('click', function(e) {
   e.preventDefault();
