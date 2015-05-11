@@ -128,7 +128,7 @@ Dialog element comes with an API which provides access to functions like `show()
 * [MDN: HTML Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 * [MDN: HTMLDialogElement DOM Interface API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement)
 * [`<dialog>` polyfill](https://github.com/GoogleChrome/dialog-polyfill)
-* http://blog.teamtreehouse.com/a-preview-of-the-new-dialog-element
+* [`<dialog>` tutorial](http://blog.teamtreehouse.com/a-preview-of-the-new-dialog-element)
 * [12-16-2013 update on `<dialog>`](http://updates.html5rocks.com/2013/09/dialog-element-Modals-made-easy)
 * [7-24-2014 update on `<dialog>`](http://updates.html5rocks.com/2014/07/dialog-element-shipped-in-Chrome-37-Beta)
 
