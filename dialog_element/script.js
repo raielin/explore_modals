@@ -3,10 +3,12 @@
 // Get the dialogs.
 var dialog = document.getElementById('dialog');
 var modal = document.getElementById('modal');
+var styledModal = document.getElementById('styledModal');
 
 // Get the buttons.
 var dialogBtn = document.getElementById('showDialog');
 var modalBtn = document.getElementById('showModal');
+var styledModalBtn = document.getElementById('showStyledModal');
 var closeBtns = document.querySelectorAll('.close');
 
 // Setup event listeners for show buttons.
@@ -22,6 +24,12 @@ modalBtn.addEventListener('click', function(e) {
 
   // Show modal dialog with built-in showModal() method which deactivates/locks main content behind dialog box.
   modal.showModal();
+})
+
+styledModalBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  styledModal.showModal();
 })
 
 // Setup event listener for close buttons.
