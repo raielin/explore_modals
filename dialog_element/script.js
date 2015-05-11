@@ -5,7 +5,7 @@ var dialog = document.getElementById('dialog');
 
 // Get the buttons.
 var dialogBtn = document.getElementById('showDialog');
-var closeBtn = document.getElementById('close');
+var closeBtns = document.querySelectorAll('.close');
 
 // Setup an event listener for the show button.
 dialogBtn.addEventListener('click', function(e) {
@@ -15,10 +15,9 @@ dialogBtn.addEventListener('click', function(e) {
   dialog.show();
 });
 
-// Setup event listener for the close button.
-closeBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-
-  // Close dialog with built-in close() method.
-  dialog.close();
-});
+// Setup event listener for close buttons.
+for (var i = 0; i < closeBtns.length; i++) {
+  closeBtns[i].addEventListener('click', function(e) {
+     this.parentNode.close();
+  });
+}
