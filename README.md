@@ -117,7 +117,7 @@ Dialog element comes with an API which provides access to functions like `show()
 * Creates an overlay that covers the whole viewport area, no matter how far down main content extends, or how far down user scrolls.
 
 ####Cons
-* Currently only basic support in Chrome and Opera.
+* Currently only basic support in Chrome and Opera. (Though there is a [polyfill](https://github.com/GoogleChrome/dialog-polyfill) available.)
 
 
 ##References
