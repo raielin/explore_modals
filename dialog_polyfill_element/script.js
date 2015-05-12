@@ -29,13 +29,13 @@ modalBtn.addEventListener('click', function(e) {
 
   // Show modal dialog with built-in showModal() method which deactivates/locks main content behind dialog box.
   modal.showModal();
-})
+});
 
 styledModalBtn.addEventListener('click', function(e) {
   e.preventDefault();
 
   styledModal.showModal();
-})
+});
 
 // Setup event listener for close buttons.
 for (var i = 0; i < closeBtns.length; i++) {
